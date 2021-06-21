@@ -1,0 +1,25 @@
+RewriteEngine On
+
+Options +MultiViews
+
+
+RewriteRule ^core/home$ core/home.php
+
+
+RewriteRule ^utilisateur/connect$ utilisateur/check.php
+
+
+ErrorDocument 404 http://localhost/pfe/error/404
+
+RewriteRule ^cours/$ error/404
+RewriteRule ^chapitre/$ error/404
+RewriteRule ^exercice/$ error/404
+RewriteRule ^corrige/$ error/404
+RewriteRule ^utilisateur/$ error/404
+
+
+#<IfModule mod_rewrite.c>
+#RewriteEngine on
+#RewriteRule ^$ error/404 
+#RewriteRule (.*) erroe/404/ [L]
+#</IfModule> 
